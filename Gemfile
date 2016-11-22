@@ -34,6 +34,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker', :git => 'https://github.com/stympy/faker.git'
+  gem 'simplecov', :require => false
 end
 
 group :development do
