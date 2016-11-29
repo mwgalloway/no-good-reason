@@ -13,5 +13,7 @@ describe "User" do
     expect(FactoryGirl.build(:user, email: nil)).to_not be_valid
   end
   
-  it "is invalid without a hashed password"
+  it "is invalid without a hashed password" do
+    expect(FactoryGirl.build(:user, password: nil)).to_not be_valid
+  end
 end
