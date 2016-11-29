@@ -1,3 +1,5 @@
 FactoryGirl.define do
-  factory :user
+  factory :user do |f|
+    f.username Faker::Internet.user_name
+  end
 end
