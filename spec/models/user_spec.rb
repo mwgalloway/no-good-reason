@@ -1,6 +1,6 @@
 require_relative '../rails_helper'
 
-describe "User" do
+describe User do
   it "has a valid factory" do
     expect(FactoryGirl.create(:user)).to be_valid
   end
@@ -16,4 +16,6 @@ describe "User" do
   it "is invalid without a hashed password" do
     expect(FactoryGirl.build(:user, password: nil)).to_not be_valid
   end
+
+  it { should have_many(:posts) }
 end
