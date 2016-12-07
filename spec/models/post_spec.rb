@@ -12,7 +12,8 @@ describe "Post" do
   it "is invalid without content" do
     expect(FactoryGirl.build(:post, content: nil)).to_not be_valid
   end
-  
-  it "is invalid without an author"
-  it "should belong to an author"
+
+  it "is invalid without an author" do
+    expect(FactoryGirl.build(:post, author: nil)).to_not be_valid
+  end
 end
