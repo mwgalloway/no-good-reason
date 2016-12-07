@@ -5,7 +5,10 @@ describe "Post" do
     expect(FactoryGirl.create(:post)).to be_valid
   end
   
-  it "is invalid without a subject"
+  it "is invalid without a subject" do
+    expect(FactoryGirl.build(:post, subject: nil)).to_not be_valid
+  end
+
   it "is invalid without content"
   it "is invalid without an author"
   it "should belong to an author"
