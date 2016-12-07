@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-  validates :subject, presence: true
+  validates :subject, :content, presence: true
 end

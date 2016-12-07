@@ -9,7 +9,10 @@ describe "Post" do
     expect(FactoryGirl.build(:post, subject: nil)).to_not be_valid
   end
 
-  it "is invalid without content"
+  it "is invalid without content" do
+    expect(FactoryGirl.build(:post, content: nil)).to_not be_valid
+  end
+  
   it "is invalid without an author"
   it "should belong to an author"
 end
